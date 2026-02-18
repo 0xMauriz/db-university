@@ -1,32 +1,32 @@
 SELECT queries:
 
 
-SELECT COUNT(`id`)
+SELECT `name`
 FROM `students`
 WHERE `date_of_birth` >= '1990-01-01' AND `date_of_birth` <= '1990-12-31'
 
 
-SELECT COUNT(`id`)
+SELECT `name`
 FROM `courses`
 WHERE `cfu` > '10'
 
 
-SELECT COUNT(`id`)
+SELECT `name`
 FROM `students`
 WHERE `date_of_birth` < '1996-02-17'
 
 
-SELECT COUNT(`id`)
+SELECT `name`
 FROM `courses`
 WHERE `year` = '1' AND `period` = 'I semestre'
 
 
-SELECT COUNT(`id`)
+SELECT `id`
 FROM `exams`
 WHERE `date` = '2020-06-20' AND `hour` > '14:00:00'
 
 
-SELECT COUNT(`id`)
+SELECT `name`
 FROM `degrees`
 WHERE `level` = 'magistrale'
 
@@ -38,3 +38,7 @@ FROM `departments`
 SELECT COUNT(`id`)
 FROM `teachers`
 WHERE `phone` IS NULL
+
+
+GROUP BY queries
+
