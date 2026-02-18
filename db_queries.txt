@@ -1,0 +1,8 @@
+SELECT queries:
+
+
+SELECT COUNT(`id`)
+FROM `students`
+WHERE `date_of_birth` >= '1990-01-01' AND `date_of_birth` <= '1990-12-31'
+
+
