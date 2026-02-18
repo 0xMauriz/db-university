@@ -42,3 +42,4 @@ WHERE `phone` IS NULL
 
 GROUP BY queries
 
+
