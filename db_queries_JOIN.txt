@@ -36,10 +36,10 @@ INNER JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id`
 INNER JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`;
 
 
-SELECT `teachers`.`name`, `departments`.`name`
 FROM `courses`
 INNER JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id`
 INNER JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`
 INNER JOIN `degrees` ON `degrees`.`id` = `courses`.`degree_id`
 INNER JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
-WHERE `departments`.`name` = 'Dipartimento di Matematica';
+WHERE `departments`.`name` = 'Dipartimento di Matematica'
+GROUP BY `teachers`.`name`;
