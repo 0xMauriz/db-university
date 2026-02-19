@@ -1,11 +1,11 @@
 JOIN queries
 
 
-SELECT *
+SELECT `students`.`name`
 FROM `students`
 INNER JOIN `degrees`
 ON `degrees`.`id` = `students`.`degree_id`
-WHERE `degrees`.`id` = '53';
+WHERE `degrees`.`name` = 'Corso di Laurea in Economia';
 
 
 SELECT *
@@ -22,3 +22,8 @@ INNER JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`
 WHERE `teachers`.`id` = '44';
 
 
+SELECT `students`.`name`, `courses`.*, `departments`.`name`
+FROM `students`
+INNER JOIN `degrees` ON `degrees`.`id` = `students`.`degree_id`
+INNER JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
+INNER JOIN `courses` ON `courses`.`degree_id` = `degrees`.`id`;
